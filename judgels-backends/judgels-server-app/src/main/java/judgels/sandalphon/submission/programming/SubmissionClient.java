@@ -71,14 +71,14 @@ public class SubmissionClient {
                 .submissionSource(source)
                 .build();
 
-        try {
-            messageClient.sendMessage(
-                    gradingResponseQueueName,
-                    gradingRequestQueueName,
-                    GradingRequest.class.getSimpleName(),
-                    mapper.writeValueAsString(gradingRequest));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        // try {
+        //     messageClient.sendMessage(
+        //             gradingResponseQueueName,
+        //             gradingRequestQueueName,
+        //             GradingRequest.class.getSimpleName(),
+        //             mapper.writeValueAsString(gradingRequest));
+        // } catch (IOException e) {
+        //     throw new RuntimeException(e);
+        // }
     }
 }
